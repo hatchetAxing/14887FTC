@@ -31,8 +31,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
 package org.firstinspires.ftc.robotcontroller.internal;
 
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.OpModeManager;
 import com.qualcomm.robotcore.eventloop.opmode.OpModeRegister;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.robotcontroller.external.samples.ConceptNullOp;
 
@@ -41,6 +43,8 @@ import org.firstinspires.ftc.robotcontroller.external.samples.ConceptNullOp;
  * @see #register(OpModeManager)
  */
 public class FtcOpModeRegister implements OpModeRegister {
+
+    private Object TeleOp;
 
     /**
      * {@link #register(OpModeManager)} is called by the SDK game in order to register
@@ -66,5 +70,6 @@ public class FtcOpModeRegister implements OpModeRegister {
         /**
          * Any manual OpMode class registrations should go here.
          */
+        manager.register("MyTeleOp", (OpMode) TeleOp);
     }
 }
